@@ -23,7 +23,7 @@ public class MainTest {
         items.add(new product.CartItem(product.ProductType.STATIONERY_ORGANIZER, new BigDecimal(20)));
 
 
-        Assert.assertEquals(29, new Main().solution(items, coupons));
+        Assert.assertEquals(BigDecimal.valueOf(29), new Main().solution(items, coupons));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class MainTest {
         coupons.add(new NextItemCoupon(items.size(), 10));
         items.add(new product.CartItem(product.ProductType.STATIONERY_ORGANIZER, new BigDecimal(20)));
 
-        Assert.assertEquals(28, new Main().solution(items, coupons));
+        Assert.assertEquals(BigDecimal.valueOf(28), new Main().solution(items, coupons));
     }
 
     @Test
@@ -51,6 +51,6 @@ public class MainTest {
         coupons.add(new NextItemCoupon(items.size(), 10));
         items.add(new CartItem(ProductType.POSTCARD_SORTER, new BigDecimal(10)));
 
-        Assert.assertEquals(12.9, new Main().solution(items, coupons));
+        Assert.assertEquals(BigDecimal.valueOf(12.9), new Main().solution(items, coupons));
     }
 }

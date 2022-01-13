@@ -3,7 +3,7 @@ package coupon;
 import java.math.BigDecimal;
 
 public class NextItemCoupon implements Coupon {
-    int nextProduct;
+    int nextProduct; // to identify next item index
     int percentage;
 
     public NextItemCoupon(int nextProduct, int percentage) {
